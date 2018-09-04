@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <Navbar/>
+    <Carousel/>
     <h1>{{ msg }}</h1>
     <p>
       For guide and recipes on how to configure / customize this project,<br>
@@ -33,6 +34,7 @@
 
 <script>
 import Navbar from './Navbar.vue'
+import Carousel from './Carousel.vue'
 
 export default {
   name: 'HelloWorld',
@@ -40,7 +42,8 @@ export default {
     msg: String
   },
   components: {
-    Navbar
+    Navbar,
+    Carousel
   }
 }
 </script>
