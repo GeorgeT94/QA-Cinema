@@ -18,19 +18,6 @@
             <a href="#">social2</a><br>
             <a href="#">social3</a>
           </td>
-
-          <!-- <tr>
-            <td>link1</td>
-            <td>social1</td>
-          </tr>
-          <tr>
-            <td>link2</td>
-            <td>social2</td>
-          </tr>
-          <tr>
-            <td>link3</td>
-            <td>social3</td>
-          </tr> -->
         </tbody>
       </table>
   </footer>

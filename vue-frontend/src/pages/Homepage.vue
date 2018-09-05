@@ -1,16 +1,19 @@
 <template>
   <div class="hello">
     <Carousel/>
+    <Listing/>
   </div>
 </template>
 
 <script>
 import Carousel from '../components/Carousel.vue'
+import Listing from '../components/Listing.vue'
 
 export default {
   name: 'Homepage',
   components: {
-    Carousel
+    Carousel,
+    Listing
   }
 }
 </script>
