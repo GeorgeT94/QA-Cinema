@@ -21,8 +21,8 @@ public class App {
 
 	@PostConstruct
 	public void setupDbWithData(){
-		Film film= new Film("The Great Escape", null);
-		film.setShowings(Arrays.asList(new Showing("8:00"), new Showing("12:00")));
-		film= filmRepository.save(film);
+	//	Film film= new Film("The Great Escape", null);
+	//	film.setShowings(Arrays.asList(new Showing("8:00"), new Showing("12:00")));
+	//	film= filmRepository.save(film);
 	}
 }
