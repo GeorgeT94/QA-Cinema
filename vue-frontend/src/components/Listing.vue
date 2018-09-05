@@ -75,13 +75,14 @@ export default {
 }
 td{
   text-align: center;
-  padding-right: 5%;
   padding-top: 2%;
+  padding-left: 0%;
+  padding-right: 2%;
 }
 img{
   width: 100px;
 }
 table{
-  width: 50%
+  width: 50%;
 }
 </style>

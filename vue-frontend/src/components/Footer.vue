@@ -20,6 +20,7 @@
           </td>
         </tbody>
       </table>
+    <a>© QA Cinemas. All rights reserved.</a>
   </footer>
 </template>
 
@@ -33,11 +34,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .app-footer{
-  font-size: 10px;
+  font-size: 12px;
+  padding-right: 10%;
+  background-color: lightgrey;
 }
 th{
-  padding-bottom: 0px;
   padding-top: 20px;
   font-size: 15px;
+}
+a{
+  line-height: 30px;
 }
 </style>
