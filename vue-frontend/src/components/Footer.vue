@@ -1,5 +1,5 @@
 <template>
-  <footer class="app-footer">
+  <footer class="app-footer navbar-fixed-bottom">
     <table class="table table-borderless">
         <thead>
           <tr>
@@ -37,6 +37,7 @@ export default {
   font-size: 12px;
   padding-right: 10%;
   background-color: lightgrey;
+  margin-bottom: 0px;
 }
 th{
   padding-top: 20px;

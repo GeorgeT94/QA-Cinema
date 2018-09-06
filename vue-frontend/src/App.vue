@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <Navbar/>
-    <Homepage/>
+    <!-- <component :is="dynamicComponent"/> -->
+    <router-view></router-view>
     <Footer/>
   </div>
 </template>
@@ -17,6 +18,11 @@ export default {
     Navbar,
     Homepage,
     Footer
+  },
+  data() {
+    return {
+      dynamicComponent: 'Homepage'
+    }
   }
 }
 </script>
