@@ -1,0 +1,24 @@
+<template>
+  <div class="hello">
+    <Carousel/>
+    <Listing/>
+  </div>
+</template>
+
+<script>
+import Carousel from '../components/Carousel.vue'
+import Listing from '../components/Listing.vue'
+
+export default {
+  name: 'Homepage',
+  components: {
+    Carousel,
+    Listing
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+</style>

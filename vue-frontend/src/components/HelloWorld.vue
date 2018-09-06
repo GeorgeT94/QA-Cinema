@@ -1,5 +1,7 @@
 <template>
   <div class="hello">
+    <Navbar/>
+    <Carousel/>
     <h1>{{ msg }}</h1>
     <p>
       For guide and recipes on how to configure / customize this project,<br>
@@ -31,10 +33,17 @@
 </template>
 
 <script>
+import Navbar from './Navbar.vue'
+import Carousel from './Carousel.vue'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  components: {
+    Navbar,
+    Carousel
   }
 }
 </script>
