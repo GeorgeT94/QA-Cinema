@@ -21,7 +21,7 @@ public class App {
 
 	@PostConstruct
 	public void setupDbWithData(){
-		Film film= new Film("The Great Escape", null);
+		Film film = new Film(399360, "Alpha", "Experience the incredible story  friend", "Adventure", "After a hunting .", 75.67, 5.4, "/afdZAIcAQscziqVtsEoh2PwsYTW.jpg", "http://www.alpha-themovie.com", "Studio 8", "96", null);
 		film.setShowings(Arrays.asList(new Showing("8:00"), new Showing("12:00")));
 		film= filmRepository.save(film);
 	}
