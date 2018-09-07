@@ -54,8 +54,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 #classification{
-  padding: 2% 15% 5% 20%;
+  padding: 2% 0% 5% 0%;
+  align-items: center;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 h1{
   padding: 5% 0% 0% 15%;
