@@ -38,6 +38,7 @@ export default {
   padding-right: 10%;
   background-color: lightgrey;
   margin-bottom: 0px;
+  text-align: center;
 }
 th{
   padding-top: 20px;

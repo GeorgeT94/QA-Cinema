@@ -22,7 +22,7 @@
               About Us
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Movie Classifications</a>
+              <router-link to="/classifications"><a class="dropdown-item" href="#">Movie Classifications</a></router-link>
               <div class="dropdown-divider"></div>
               <router-link to="/openingTimes"><a class="dropdown-item" href="#">Opening Times</a></router-link>
             </div>

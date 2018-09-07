@@ -2,13 +2,13 @@
   <div>
     <h1>Opening Times</h1>
     <div>
-      <a>{{openingTimes.sunday}}</a>
-      <a>{{openingTimes.monday}}</a>
-      <a>{{openingTimes.tuesday}}</a>
-      <a>{{openingTimes.wednesday}}</a>
-      <a>{{openingTimes.thursday}}</a>
-      <a>{{openingTimes.friday}}</a>
-      <a>{{openingTimes.saturday}}</a>
+      <a>{{openingTimes.sunday}}</a><br>
+      <a>{{openingTimes.monday}}</a><br>
+      <a>{{openingTimes.tuesday}}</a><br>
+      <a>{{openingTimes.wednesday}}</a><br>
+      <a>{{openingTimes.thursday}}</a><br>
+      <a>{{openingTimes.friday}}</a><br>
+      <a>{{openingTimes.saturday}}</a><br>
     </div>
   </div>
 </template>
