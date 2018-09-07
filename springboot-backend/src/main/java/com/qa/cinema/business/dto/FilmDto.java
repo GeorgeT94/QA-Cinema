@@ -9,21 +9,24 @@ public class FilmDto {
     private String filmName;
     private Integer filmTMDB;
     private String filmTagLine;
-    private List<String> filmGenres;
+    private String filmGenres;
     private String filmOverview;
     private Double filmPopularity;
     private Double filmRating;
     private String filmPosterURL;
     private String filmWebsite;
-    private List<String> filmProduction;
+    private String filmProduction;
     private String filmRuntime;
 
     private List<ShowingDto> showings= new ArrayList<>();
 
-    public FilmDto(Integer filmId, Integer filmTMDB,String filmName, String filmTagLine,List<String> filmGenres, String filmOverview, Double filmPopularity,Double filmRating, String filmPosterURL, String filmWebsite, List<String> filmProduction, String filmRuntime, List<Showing> Showings) {
+    public FilmDto() {
+    }
+
+    public FilmDto(Integer filmId, Integer filmTMDB,String filmName, String filmTagLine,String filmGenres, String filmOverview, Double filmPopularity,Double filmRating, String filmPosterURL, String filmWebsite, String filmProduction, String filmRuntime, List<ShowingDto> showings) {
         this.filmId = filmId;
         this.filmName = filmName;
-        this.Showings = Showings;
+        this.showings = showings;
         this.filmTMDB = filmTMDB;
         this.filmTagLine = filmTagLine;
         this.filmGenres = filmGenres;
@@ -32,12 +35,12 @@ public class FilmDto {
         this.filmRating = filmRating;
         this.filmPosterURL = filmPosterURL;
         this.filmWebsite = filmWebsite;
-        this.filmProduction = filmProduction;
         this.filmRuntime = filmRuntime;
+        this.filmProduction = filmProduction;
+
     }
 
-    public FilmDto() {
-    }
+
 
     public Integer getFilmId() {
         return filmId;
@@ -87,7 +90,7 @@ public class FilmDto {
         this.filmTagLine = filmTagLine;
     }
 
-    public List<String> getFilmProduction() {
+    public String getFilmProduction() {
         return filmProduction;
     }
 
@@ -99,11 +102,11 @@ public class FilmDto {
         return filmOverview;
     }
 
-    public void setFilmProduction(List<String> filmProduction) {
+    public void setFilmProduction(String filmProduction) {
         this.filmProduction = filmProduction;
     }
 
-    public List<String> getFilmGenres() {
+    public String getFilmGenres() {
         return filmGenres;
     }
 
@@ -131,7 +134,15 @@ public class FilmDto {
         return filmPopularity;
     }
 
-    public void setFilmGenres(List<String> filmGenres) {
+    public String getFilmRuntime() {
+        return filmRuntime;
+    }
+
+    public void setFilmRuntime(String filmRuntime) {
+        this.filmRuntime = filmRuntime;
+    }
+
+    public void setFilmGenres(String filmGenres) {
         this.filmGenres = filmGenres;
     }
 

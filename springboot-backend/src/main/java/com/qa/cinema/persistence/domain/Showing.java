@@ -3,19 +3,26 @@ package com.qa.cinema.persistence.domain;
 import javax.persistence.*;
 
 @Entity
+@Table
 public class Showing {
     
-	@Column
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
-	private Integer showingId;
+    @Column
+    private Integer showingId;
     @Column
     private String showingTime;
-    @ManyToOne
+
+
+    @ManyToOne(fetch = FetchType.LAZY)
     private Film film;
 
-    public Showing(String showingName) {
-		this.showingTime = showingName;
+    public Film getFilm() {
+        return film;
+    }
+
+    public Showing(String showingTime) {
+		this.showingTime = showingTime;
 	}
 
 	public Integer getShowingId() {
@@ -26,27 +33,17 @@ public class Showing {
         this.showingId = showingId;
     }
 
-    public String getShowingName() {
+    public String getShowingTime() {
         return showingTime;
     }
 
-    public void setShowingName(String showingName) {
-        this.showingTime = showingName;
-    }
-
-    public Film getFilm() {
-        return film;
-    }
-
-    public void setFilm(Film film) {
-        this.film = film;
+    public void setShowingTime(String showingTime) {
+        this.showingTime = showingTime;
     }
 
     public Showing() {
     }
 
-    public Showing(String showingName, Film film) {
-        this.showingTime = showingName;
-        this.film = film;
-    }
+
+
 }

@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Entity
+@Table
 public class Film{
 	
 	@Column
@@ -13,21 +14,31 @@ public class Film{
 	private Integer filmId;
     @Column
     private Integer filmTMDB;
+    @Column
     private String filmName;
+    @Column
     private String filmTagLine;
-    private List<String> filmGenres;
+    @Column
+    private String filmGenres;
+    @Column
     private String filmOverview;
+    @Column
     private Double filmPopularity;
+    @Column
     private Double filmRating;
+    @Column
     private String filmPosterURL;
+    @Column
     private String filmWebsite;
+    @Column
     private String filmRuntime;
-    private List<String> filmProduction;
+    @Column
+    private String filmProduction;
 
 
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Showing> Showings= new LinkedList<>();
+    private List<Showing> showings;
 
 
     public Integer getFilmId() {
@@ -47,11 +58,11 @@ public class Film{
     }
 
     public List<Showing> getShowings() {
-        return Showings;
+        return showings;
     }
 
     public void setShowings(List<Showing> Showings) {
-        this.Showings = Showings;
+        this.showings = showings;
     }
 
     public Double getFilmPopularity() {
@@ -66,7 +77,7 @@ public class Film{
         return filmTMDB;
     }
 
-    public List<String> getFilmGenres() {
+    public String getFilmGenres() {
         return filmGenres;
     }
 
@@ -74,7 +85,7 @@ public class Film{
         return filmOverview;
     }
 
-    public List<String> getFilmProduction() {
+    public String getFilmProduction() {
         return filmProduction;
     }
 
@@ -90,7 +101,7 @@ public class Film{
         return filmWebsite;
     }
 
-    public void setFilmGenres(List<String> filmGenres) {
+    public void setFilmGenres(String filmGenres) {
         this.filmGenres = filmGenres;
     }
 
@@ -106,7 +117,7 @@ public class Film{
         this.filmPosterURL = filmPosterURL;
     }
 
-    public void setFilmProduction(List<String> filmProduction) {
+    public void setFilmProduction(String filmProduction) {
         this.filmProduction = filmProduction;
     }
 
@@ -126,12 +137,20 @@ public class Film{
         this.filmWebsite = filmWebsite;
     }
 
+    public String getFilmRuntime() {
+        return filmRuntime;
+    }
+
+    public void setFilmRuntime(String filmRuntime) {
+        this.filmRuntime = filmRuntime;
+    }
+
     public Film() {
     }
 
-    public Film(Integer filmTMDB,String filmName, String filmTagLine,List<String> filmGenres, String filmOverview, Double filmPopularity,Double filmRating, String filmPosterURL, String filmWebsite, List<String> filmProduction, String filmRuntime, List<Showing> Showings) {
+    public Film(Integer filmTMDB,String filmName, String filmTagLine,String filmGenres, String filmOverview, Double filmPopularity,Double filmRating, String filmPosterURL, String filmWebsite, String filmProduction, String filmRuntime, List<Showing> showings) {
         this.filmName = filmName;
-        this.Showings = Showings;
+        this.showings = showings;
         this.filmTMDB = filmTMDB;
         this.filmTagLine = filmTagLine;
         this.filmGenres = filmGenres;
