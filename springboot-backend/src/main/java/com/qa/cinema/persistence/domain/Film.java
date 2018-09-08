@@ -5,7 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Entity
-@Table
 public class Film{
 	
 	@Column
@@ -38,7 +37,7 @@ public class Film{
 
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Showing> showings;
+    private List<Showing> showings= new LinkedList<>();
 
 
     public Integer getFilmId() {

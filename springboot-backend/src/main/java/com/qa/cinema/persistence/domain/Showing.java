@@ -3,7 +3,6 @@ package com.qa.cinema.persistence.domain;
 import javax.persistence.*;
 
 @Entity
-@Table
 public class Showing {
     
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,12 +13,6 @@ public class Showing {
     private String showingTime;
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Film film;
-
-    public Film getFilm() {
-        return film;
-    }
 
     public Showing(String showingTime) {
 		this.showingTime = showingTime;
@@ -43,7 +36,6 @@ public class Showing {
 
     public Showing() {
     }
-
 
 
 }

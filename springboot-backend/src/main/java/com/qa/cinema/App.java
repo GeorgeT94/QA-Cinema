@@ -8,6 +8,8 @@ import com.qa.cinema.persistence.domain.Showing;
 import com.qa.cinema.persistence.domain.Film;
 import javax.annotation.PostConstruct;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 @SpringBootApplication
 public class App {
@@ -21,8 +23,13 @@ public class App {
 
 	@PostConstruct
 	public void setupDbWithData(){
-		Film film = new Film(399360, "Alpha", "Experience the incredible story  friend", "Adventure", "After a hunting .", 75.67, 5.4, "/afdZAIcAQscziqVtsEoh2PwsYTW.jpg", "http://www.alpha-themovie.com", "Studio 8", "96", null);
-		film.setShowings(Arrays.asList(new Showing("8:00"), new Showing("12:00")));
+		List<Showing> list = new LinkedList<>();
+		list.add(new Showing("8:00"));
+		list.add(new Showing("12:00"));
+
+
+		Film film = new Film(399360, "Alpha", "Experience the incredible story  friend", "Adventure", "After a hunting .", 75.67, 5.4, "/afdZAIcAQscziqVtsEoh2PwsYTW.jpg", "http://www.alpha-themovie.com", "Studio 8", "96", list);
+		//film.setShowings(Arrays.asList(new Showing("8:00"), new Showing("12:00")));
 		film= filmRepository.save(film);
 	}
 }
