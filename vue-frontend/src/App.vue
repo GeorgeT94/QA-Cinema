@@ -1,15 +1,16 @@
 <template>
   <div id="app">
     <Navbar/>
-    <Homepage/>
+    <!-- <component :is="dynamicComponent"/> -->
+    <router-view></router-view>
     <Footer/>
   </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
+import Navbar from './components/shellPage/Navbar.vue'
 import Homepage from './pages/Homepage.vue'
-import Footer from './components/Footer.vue'
+import Footer from './components/shellPage/Footer.vue'
 
 export default {
   name: 'app',
@@ -17,6 +18,11 @@ export default {
     Navbar,
     Homepage,
     Footer
+  },
+  data() {
+    return {
+      dynamicComponent: 'Homepage'
+    }
   }
 }
 </script>
@@ -26,7 +32,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 </style>

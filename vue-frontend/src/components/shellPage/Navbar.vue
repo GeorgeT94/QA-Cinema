@@ -1,38 +1,34 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="#">QA Cinemas</a>
+      <router-link to="/"><a class="navbar-brand" href="#">QA Cinemas</a></router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <router-link to="/"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a></router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Movie Listing</a>
+            <router-link to="/moviesPage"><a class="nav-link" href="#">Movie Listing</a></router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <router-link to="/upcoming"><a class="nav-link" href="#">Upcoming Films</a></router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Book Tickets</a>
+            <router-link to="/ticketPage"><a class="nav-link" href="#">Book Tickets</a></router-link>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
+              About Us
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
+              <router-link to="/classifications"><a class="dropdown-item" href="#">Movie Classifications</a></router-link>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <router-link to="/openingTimes"><a class="dropdown-item" href="#">Opening Times</a></router-link>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -45,6 +41,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'Navbar',
 
@@ -54,7 +51,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 nav{
-  background-color: #000080;
+  background-color: #2A1B3D;
 }
 .navbar-brand{
   padding-left: 30px
