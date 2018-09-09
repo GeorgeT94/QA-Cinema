@@ -4,10 +4,12 @@ public class ShowingDto {
     
 	private Integer showingId;
     private String showingTime;
+    private Integer showingTMDB;
 
-    public ShowingDto(Integer showingId, String showingTime) {
+    public ShowingDto(Integer showingId, String showingTime, Integer showingTMDB) {
         this.showingId = showingId;
         this.showingTime = showingTime;
+        this.showingTMDB = showingTMDB;
     }
 
     public ShowingDto() {
@@ -29,4 +31,11 @@ public class ShowingDto {
         return showingTime;
     }
 
+    public Integer getShowingTMDB() {
+        return showingTMDB;
+    }
+
+    public void setShowingTMDB(Integer showingTMDB) {
+        this.showingTMDB = showingTMDB;
+    }
 }

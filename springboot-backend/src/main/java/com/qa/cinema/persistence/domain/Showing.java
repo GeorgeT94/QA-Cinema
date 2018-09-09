@@ -3,7 +3,6 @@ package com.qa.cinema.persistence.domain;
 import javax.persistence.*;
 
 @Entity
-@Table
 public class Showing {
     
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,17 +11,14 @@ public class Showing {
     private Integer showingId;
     @Column
     private String showingTime;
+    @Column
+    private Integer showingTMDB;
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Film film;
 
-    public Film getFilm() {
-        return film;
-    }
-
-    public Showing(String showingTime) {
+    public Showing(String showingTime, Integer showingTMDB) {
 		this.showingTime = showingTime;
+		this.showingTMDB=showingTMDB;
 	}
 
 	public Integer getShowingId() {
@@ -41,9 +37,16 @@ public class Showing {
         this.showingTime = showingTime;
     }
 
-    public Showing() {
+    public Integer getShowingTMDB() {
+        return showingTMDB;
     }
 
+    public void setShowingTMDB(Integer showingTMDB) {
+        this.showingTMDB = showingTMDB;
+    }
+
+    public Showing() {
+    }
 
 
 }

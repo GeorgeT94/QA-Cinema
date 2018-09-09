@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <Navbar/>
     <!-- <component :is="dynamicComponent"/> -->
     <router-view></router-view>
@@ -8,13 +9,16 @@
 </template>
 
 <script>
+
 import Navbar from './components/shellPage/Navbar.vue'
 import Homepage from './pages/Homepage.vue'
 import Footer from './components/shellPage/Footer.vue'
 
+
 export default {
   name: 'app',
   components: {
+
     Navbar,
     Homepage,
     Footer
@@ -23,6 +27,7 @@ export default {
     return {
       dynamicComponent: 'Homepage'
     }
+
   }
 }
 </script>

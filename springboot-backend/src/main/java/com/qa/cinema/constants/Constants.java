@@ -13,4 +13,9 @@ public interface Constants {
 	static final String TMDB_UPCOMING = "/upcoming";
 	static final String TMDB_SEARCH = "/search/{name}";
 	static final String TMDB_GET_FILM_BY_ID = "/getById/{id}";
+	static final String GET_SHOWING_BY_ID = "/getShowing/{showingId}";
+	static final String GET_ALL_SHOWINGS = "/getAllShowings";
+	static final String SAVE_SHOWING = "/saveShowing";
+	static final String GET_SHOWINGS_BY_TMDB = "/getShowingByTMDB/{tmdb}";
+	static final String SHOWING = "/showing";
 }
