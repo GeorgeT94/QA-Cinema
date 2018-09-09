@@ -7,6 +7,7 @@ import TicketPage from '../pages/TicketPage.vue'
 import MoviePage from '../pages/MoviesPage.vue'
 import AboutUs from '../pages/AboutUs.vue'
 import FutureReleases from '../pages/FutureReleases'
+import MovieInfo from '../pages/MovieInfo'
 
 Vue.use(Router)
 export default new Router({
@@ -46,6 +47,11 @@ export default new Router({
             path: '/upcoming',
             name: 'FutureReleases',
             component: FutureReleases
+        },
+        {
+            path: '/movieinfo/:id',
+            name: 'MovieInfo',
+            component: MovieInfo
         }
 
     ]
