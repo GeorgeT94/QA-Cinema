@@ -8,6 +8,8 @@ import MoviePage from '../pages/MoviesPage.vue'
 import AboutUs from '../pages/AboutUs.vue'
 import FutureReleases from '../pages/FutureReleases'
 import MovieInfo from '../pages/MovieInfo'
+import AdminLogin from '../pages/AdminLogin'
+import AdminPage from '../pages/AdminPage'
 
 Vue.use(Router)
 export default new Router({
@@ -52,6 +54,16 @@ export default new Router({
             path: '/movieinfo/:id',
             name: 'MovieInfo',
             component: MovieInfo
+        },
+        {
+            path: '/adminLogin',
+            name: 'AdminLogin',
+            component: AdminLogin
+        },
+        {
+            path: '/adminPage',
+            name: 'AdminPage',
+            component: AdminPage
         }
 
     ]
