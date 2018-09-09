@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Carousel from '../components/Carousel.vue'
-import Listing from '../components/Listing.vue'
+import Carousel from '../components/homePage/Carousel.vue'
+import Listing from '../components/homePage/Listing.vue'
 
 export default {
   name: 'Homepage',

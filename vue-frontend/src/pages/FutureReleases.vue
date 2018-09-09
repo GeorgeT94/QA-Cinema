@@ -1,19 +1,19 @@
 <template>
   <div>
-    <h1>Movie Gallery</h1>
-    <PopularMovies />
+    <h1>Future Releases</h1>
+    <UpcomingMovies />
   </div>
 
 </template>
 
 <script>
-import PopularMovies from "../components/listings/PopularMovies.vue"
+import UpcomingMovies from "../components/listings/UpcomingMovies.vue"
 
 
 export default {
   name: 'MoviesPage',
   components:{
-    PopularMovies
+    UpcomingMovies
   },
   data() {
     return {

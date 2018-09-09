@@ -15,6 +15,9 @@
             <router-link to="/moviesPage"><a class="nav-link" href="#">Movie Listing</a></router-link>
           </li>
           <li class="nav-item">
+            <router-link to="/upcoming"><a class="nav-link" href="#">Upcoming Films</a></router-link>
+          </li>
+          <li class="nav-item">
             <router-link to="/ticketPage"><a class="nav-link" href="#">Book Tickets</a></router-link>
           </li>
           <li class="nav-item dropdown">
@@ -26,9 +29,6 @@
               <div class="dropdown-divider"></div>
               <router-link to="/openingTimes"><a class="dropdown-item" href="#">Opening Times</a></router-link>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -51,7 +51,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 nav{
-  background-color: #000080;
+  background-color: #2A1B3D;
 }
 .navbar-brand{
   padding-left: 30px

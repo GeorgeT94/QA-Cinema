@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
+import Navbar from './components/shellPage/Navbar.vue'
 import Homepage from './pages/Homepage.vue'
-import Footer from './components/Footer.vue'
+import Footer from './components/shellPage/Footer.vue'
 
 export default {
   name: 'app',

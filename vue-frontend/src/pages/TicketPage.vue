@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import TicketSelection from '../components/TicketSelection.vue'
+import TicketSelection from '../components/ticketPage/TicketSelection.vue'
 
 export default {
   name: 'TicketPage',
@@ -21,7 +21,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1{
   margin-left: 10%;
