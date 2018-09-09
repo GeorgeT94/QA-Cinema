@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <Navbar/>
-    <Homepage/>
+    <!-- <component :is="dynamicComponent"/> -->
+    <router-view></router-view>
     <Footer/>
   </div>
 </template>
@@ -17,6 +18,11 @@ export default {
     Navbar,
     Homepage,
     Footer
+  },
+  data() {
+    return {
+      dynamicComponent: 'Homepage'
+    }
   }
 }
 </script>
@@ -26,7 +32,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 </style>

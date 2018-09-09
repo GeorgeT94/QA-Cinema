@@ -2,7 +2,7 @@
   <div id="listing">
     <h3>Latest Releases</h3>
     <div class="table-responsive">
-      <table class="table table-borderless">
+      <table class="table table-hover">
         <tr>
           <td v-for="movie in movieList">
             <img src="../assets/Deadpool-poster.jpg"><br>
