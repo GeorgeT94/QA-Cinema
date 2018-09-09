@@ -4,8 +4,9 @@
     <div class="container">
       <div v-for="movie in upcoming.data.results" class="movie-info"  v-bind:key="movie.title">
         <h3>{{movie.name}}</h3>
-        <img class="movie-image" v-bind:src="'https://image.tmdb.org/t/p/original' + movie.poster_path"><br>
-
+        <router-link v-bind:to="'/movieinfo/' + movie.id">
+          <img class="movie-image" v-bind:src="'https://image.tmdb.org/t/p/original' + movie.poster_path"><br>
+        </router-link>
       </div>
     </div>
   </div>
