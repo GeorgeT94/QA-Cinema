@@ -8,4 +8,6 @@ public interface FilmService {
     FilmDto getFilmById(Integer filmId);
     void saveFilm(FilmDto filmDto);
     List<FilmDto> getAllFilms();
+    void deleteFilm(Integer id);
+
 }

@@ -62,7 +62,7 @@
 
                 </div>
 
-                <div class="footer">
+                <div class="bottom">
                     <H4>Showings</H4>
                     <span class="showing" v-for="showing in showings"> {{showing.showingTime}}</span>
                 </div>
@@ -176,7 +176,7 @@
         flex-wrap: wrap;
     }
 
-    .footer{
+    .bottom{
         float: bottom;
 
     }

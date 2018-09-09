@@ -57,4 +57,16 @@ public class TMDBController {
 
         return call.body();
     }
+
+    @CrossOrigin
+    @RequestMapping(value = Constants.TMDB_POPULAR, method = RequestMethod.GET)
+    public MovieResultsPage getPopular() throws IOException{
+        Call<MovieResultsPage> call = moviesService
+                .popular(null,null);
+
+        MovieResultsPage page = call.execute().body();
+
+        return page;
+    }
+
 }

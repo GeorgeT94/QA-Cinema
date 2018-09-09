@@ -1,6 +1,8 @@
 package com.qa.cinema;
 
+import com.qa.cinema.persistence.AdminRepository;
 import com.qa.cinema.persistence.ShowingRepository;
+import com.qa.cinema.persistence.domain.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,6 +23,9 @@ public class App {
 	@Autowired
 	private ShowingRepository showingRepository;
 
+	@Autowired
+	private AdminRepository adminRepository;
+
 	public static void main(String[] args) {
 		SpringApplication.run(App.class, args);
 	}
@@ -36,7 +41,8 @@ public class App {
 		Showing showing2 = new Showing("17:00", 399360);
 		showing1 = showingRepository.save(showing1);
 		showing2 = showingRepository.save(showing2);
-
+		Admin admin = new Admin("admin", "password");
+		admin = adminRepository.save(admin);
 
 	}
 }

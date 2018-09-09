@@ -20,6 +20,9 @@
           <li class="nav-item">
             <router-link to="/ticketPage"><a class="nav-link" href="#">Book Tickets</a></router-link>
           </li>
+          <li class="nav-item">
+            <router-link to="/adminLogin"><a class="nav-link" href="#">Login</a></router-link>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               About Us
