@@ -5,10 +5,7 @@ import com.uwetrottmann.tmdb2.entities.Movie;
 import com.uwetrottmann.tmdb2.entities.MovieResultsPage;
 import com.uwetrottmann.tmdb2.services.MoviesService;
 import com.uwetrottmann.tmdb2.services.SearchService;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import retrofit2.Call;
 import retrofit2.Response;
 import com.qa.cinema.constants.Constants;
@@ -22,6 +19,8 @@ public class TMDBController {
     Tmdb tmdb = new Tmdb(Constants.TMDB_API);
     MoviesService moviesService = tmdb.moviesService();
     SearchService searchService = tmdb.searchService();
+
+    @CrossOrigin
     @RequestMapping(value = Constants.TMDB_CURRENT, method = RequestMethod.GET)
     public MovieResultsPage getCurrent()throws IOException {
             Call<MovieResultsPage> call = moviesService
@@ -32,6 +31,7 @@ public class TMDBController {
         return page;
     }
 
+    @CrossOrigin
     @RequestMapping(value = Constants.TMDB_UPCOMING, method = RequestMethod.GET)
     public MovieResultsPage getUpcoming() throws IOException {
         Call<MovieResultsPage> call = moviesService
@@ -42,6 +42,7 @@ public class TMDBController {
         return page;
     }
 
+    @CrossOrigin
     @RequestMapping(value = Constants.TMDB_SEARCH, method = RequestMethod.GET)
     public MovieResultsPage getSearchResults(@PathVariable String name) throws IOException {
         Call<MovieResultsPage> call = searchService.movie(name,null,null,null,null, null, null);
@@ -49,6 +50,7 @@ public class TMDBController {
         return page;
     }
 
+    @CrossOrigin
     @RequestMapping(value = Constants.TMDB_GET_FILM_BY_ID, method = RequestMethod.GET)
     public Movie getFilmById(@PathVariable int id) throws IOException {
         Response<Movie> call = moviesService.summary(id).execute();

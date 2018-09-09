@@ -5,6 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import com.qa.cinema.persistence.domain.Showing;
 
+import java.util.List;
+
 @Repository
-public interface ShowingRepository extends JpaRepository<Showing, Integer>{
+public interface ShowingRepository extends JpaRepository<Showing, Integer> {
+     List<Showing> findAllByShowingTMDBEquals(Integer tmdb);
 }

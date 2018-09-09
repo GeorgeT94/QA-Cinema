@@ -11,11 +11,14 @@ public class Showing {
     private Integer showingId;
     @Column
     private String showingTime;
+    @Column
+    private Integer showingTMDB;
 
 
 
-    public Showing(String showingTime) {
+    public Showing(String showingTime, Integer showingTMDB) {
 		this.showingTime = showingTime;
+		this.showingTMDB=showingTMDB;
 	}
 
 	public Integer getShowingId() {
@@ -32,6 +35,14 @@ public class Showing {
 
     public void setShowingTime(String showingTime) {
         this.showingTime = showingTime;
+    }
+
+    public Integer getShowingTMDB() {
+        return showingTMDB;
+    }
+
+    public void setShowingTMDB(Integer showingTMDB) {
+        this.showingTMDB = showingTMDB;
     }
 
     public Showing() {
