@@ -60,6 +60,7 @@ export default {
   align-items: center;
   margin-left: 15%;
   margin-right: 15%;
+  background-color: aliceblue;
 }
 h1{
   padding: 5% 0% 0% 15%;

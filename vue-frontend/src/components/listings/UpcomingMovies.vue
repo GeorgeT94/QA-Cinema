@@ -64,7 +64,7 @@
     padding-right: 2%;
     padding-top: 2%;
     padding-bottom: 2%;
-    background-color: White;
+    background-color: aliceblue;
   }
 
   img:hover {

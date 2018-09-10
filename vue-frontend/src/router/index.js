@@ -11,6 +11,7 @@ import MovieInfo from '../pages/MovieInfo'
 import AdminLogin from '../pages/AdminLogin'
 import AdminPage from '../pages/AdminPage'
 import NowShowing from '../pages/NowShowing'
+import GettingHere from '../pages/GettingHere'
 
 Vue.use(Router)
 export default new Router({
@@ -70,7 +71,13 @@ export default new Router({
             path: '/upcoming',
             name: 'FutureReleases',
             component: FutureReleases
+        },
+        {
+            path: '/gettingHere',
+            name: 'GettingHere',
+            component: GettingHere
         }
+
 
     ]
 })

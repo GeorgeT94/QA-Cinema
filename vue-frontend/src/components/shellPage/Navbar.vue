@@ -31,6 +31,8 @@
               <router-link to="/classifications"><a class="dropdown-item" href="#">Movie Classifications</a></router-link>
               <div class="dropdown-divider"></div>
               <router-link to="/openingTimes"><a class="dropdown-item" href="#">Opening Times</a></router-link>
+              <div class="dropdown-divider"></div>
+              <router-link to="/gettingHere"><a class="dropdown-item" href="#">Getting Here</a></router-link>
             </div>
           </li>
           <li class="nav-item">

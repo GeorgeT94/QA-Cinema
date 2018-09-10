@@ -192,8 +192,9 @@
         padding-right: 15%;
         padding-top: 2%;
         padding-bottom: 2%;
-        background-color: white;
+        background-color: aliceblue;
     }
+
 
     td{
         min-width: 120px;
