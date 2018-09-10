@@ -40,4 +40,10 @@ public class ShowingController {
         return showingService.getShowingByTMDB(tmdb);
     }
 
+    @CrossOrigin
+    @RequestMapping(value=Constants.DELETE, method = RequestMethod.DELETE)
+    public void deleteShowing(@PathVariable Integer id) {
+        showingService.deleteShowing(id);
+    }
+
 }

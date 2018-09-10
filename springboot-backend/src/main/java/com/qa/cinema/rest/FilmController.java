@@ -32,5 +32,12 @@ public class FilmController {
 	public void saveFilm(@RequestBody FilmDto filmDto) {
 		filmService.saveFilm(filmDto);
 	}
+
+	@CrossOrigin
+	@RequestMapping(value=Constants.DELETE, method = RequestMethod.DELETE)
+	public void deleteFilm(@PathVariable Integer id) {
+		 filmService.deleteFilm(id);
+	}
+
 }
 

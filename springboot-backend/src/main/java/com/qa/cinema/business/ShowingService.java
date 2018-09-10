@@ -9,4 +9,6 @@ public interface ShowingService {
     void saveShowing(ShowingDto showingDto);
     List<ShowingDto> getAllShowings();
     List<ShowingDto> getShowingByTMDB(Integer tmdb);
+    void deleteShowing(Integer id);
+
 }

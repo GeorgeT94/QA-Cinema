@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <div v-if="type === 'upcoming'">
+        <div v-if="type === 'film'">
             <div v-for="film in films" :key="film.id">
                 <div v-on:click="getThisFilm(film.id)">
                     <img v-bind:src="'https://image.tmdb.org/t/p/w500' + film.poster_path" width="200"/><br/>
@@ -62,7 +62,7 @@
 
                 </div>
 
-                <div class="footer">
+                <div class="bottom">
                     <H4>Showings</H4>
                     <span class="showing" v-for="showing in showings"> {{showing.showingTime}}</span>
                 </div>
@@ -103,12 +103,12 @@
             },
             getUpcoming:function () {
                 this.loading = true;
-                axios.get("http://127.0.0.1:8080/tmdb/upcoming")
+                axios.get("http://127.0.0.1:8080/tmdb/film")
                     .then((response)  =>  {
                         console.log(response.data);
                         this.loading = false;
                         this.films = response.data.results;
-                        this.type = "upcoming";
+                        this.type = "film";
                     }, (error)  =>  {
                         this.loading = false;
                     })
@@ -176,7 +176,7 @@
         flex-wrap: wrap;
     }
 
-    .footer{
+    .bottom{
         float: bottom;
 
     }
