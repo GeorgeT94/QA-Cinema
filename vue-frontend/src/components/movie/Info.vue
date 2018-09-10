@@ -43,6 +43,10 @@
 
 
         </table>
+
+        <div class="comments">
+            <vue-disqus shortname="qacinama" v-bind::identifier="id" ></vue-disqus>
+        </div>
     </div>
 
 
@@ -149,5 +153,9 @@
         border: 2px black solid;
         padding: 5px;
         margin-right: 5px;
+    }
+
+    .comments{
+        padding-top: 20px;
     }
 </style>

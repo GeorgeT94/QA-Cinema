@@ -12,6 +12,7 @@ import AdminLogin from '../pages/AdminLogin'
 import AdminPage from '../pages/AdminPage'
 import NowShowing from '../pages/NowShowing'
 import GettingHere from '../pages/GettingHere'
+import Guestbook from '../pages/Guestbook'
 
 Vue.use(Router)
 export default new Router({
@@ -76,6 +77,12 @@ export default new Router({
             path: '/gettingHere',
             name: 'GettingHere',
             component: GettingHere
+        }
+        ,
+        {
+            path: '/guestbook',
+            name: 'Guestbook',
+            component: Guestbook
         }
 
 

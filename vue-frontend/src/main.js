@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import * as VueGoogleMaps from "vue2-google-maps";
+import VueDisqus from 'vue-disqus'
 
 
 Vue.config.productionTip = false
@@ -12,6 +13,9 @@ Vue.use(VueGoogleMaps, {
         libraries: "places"
     }
 });
+
+Vue.use(VueDisqus)
+
 
 new Vue({
   router,
