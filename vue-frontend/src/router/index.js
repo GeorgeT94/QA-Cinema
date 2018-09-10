@@ -10,6 +10,7 @@ import FutureReleases from '../pages/FutureReleases'
 import MovieInfo from '../pages/MovieInfo'
 import AdminLogin from '../pages/AdminLogin'
 import AdminPage from '../pages/AdminPage'
+import NowShowing from '../pages/NowShowing'
 
 Vue.use(Router)
 export default new Router({
@@ -46,11 +47,6 @@ export default new Router({
             component: AboutUs
         },
         {
-            path: '/upcoming',
-            name: 'FutureReleases',
-            component: FutureReleases
-        },
-        {
             path: '/movieinfo/:id',
             name: 'MovieInfo',
             component: MovieInfo
@@ -64,6 +60,16 @@ export default new Router({
             path: '/adminPage',
             name: 'AdminPage',
             component: AdminPage
+        },
+        {
+            path: '/current',
+            name: 'NowShowing',
+            component: NowShowing
+        },
+        {
+            path: '/upcoming',
+            name: 'FutureReleases',
+            component: FutureReleases
         }
 
     ]

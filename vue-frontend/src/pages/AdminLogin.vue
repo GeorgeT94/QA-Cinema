@@ -1,6 +1,5 @@
 <template>
     <div id="adminLogin" class="hello">
-        <h1>Login</h1>
         <login/>
     </div>
 </template>

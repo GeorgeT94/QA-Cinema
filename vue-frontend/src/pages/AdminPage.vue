@@ -1,6 +1,5 @@
 <template>
     <div id="adminPage" class="hello">
-        <h1>Admin</h1>
         <Admin/>
     </div>
 </template>

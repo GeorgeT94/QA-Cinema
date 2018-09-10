@@ -18,10 +18,10 @@
             <router-link to="/upcoming"><a class="nav-link" href="#">Upcoming Films</a></router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/ticketPage"><a class="nav-link" href="#">Book Tickets</a></router-link>
+            <router-link to="/current"><a class="nav-link" href="#">Now Showing</a></router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/adminLogin"><a class="nav-link" href="#">Login</a></router-link>
+            <router-link to="/ticketPage"><a class="nav-link" href="#">Book Tickets</a></router-link>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -32,6 +32,9 @@
               <div class="dropdown-divider"></div>
               <router-link to="/openingTimes"><a class="dropdown-item" href="#">Opening Times</a></router-link>
             </div>
+          </li>
+          <li class="nav-item">
+            <router-link to="/adminLogin"><a class="nav-link" href="#">Login</a></router-link>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
