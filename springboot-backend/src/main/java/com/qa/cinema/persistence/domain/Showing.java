@@ -5,17 +5,20 @@ import javax.persistence.*;
 @Entity
 public class Showing {
     
-	@Column
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
-	private Integer showingId;
+    @Column
+    private Integer showingId;
     @Column
     private String showingTime;
-    @ManyToOne
-    private Film film;
+    @Column
+    private Integer showingTMDB;
 
-    public Showing(String showingName) {
-		this.showingTime = showingName;
+
+
+    public Showing(String showingTime, Integer showingTMDB) {
+		this.showingTime = showingTime;
+		this.showingTMDB=showingTMDB;
 	}
 
 	public Integer getShowingId() {
@@ -26,27 +29,24 @@ public class Showing {
         this.showingId = showingId;
     }
 
-    public String getShowingName() {
+    public String getShowingTime() {
         return showingTime;
     }
 
-    public void setShowingName(String showingName) {
-        this.showingTime = showingName;
+    public void setShowingTime(String showingTime) {
+        this.showingTime = showingTime;
     }
 
-    public Film getFilm() {
-        return film;
+    public Integer getShowingTMDB() {
+        return showingTMDB;
     }
 
-    public void setFilm(Film film) {
-        this.film = film;
+    public void setShowingTMDB(Integer showingTMDB) {
+        this.showingTMDB = showingTMDB;
     }
 
     public Showing() {
     }
 
-    public Showing(String showingName, Film film) {
-        this.showingTime = showingName;
-        this.film = film;
-    }
+
 }

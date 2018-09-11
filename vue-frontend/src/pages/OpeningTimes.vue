@@ -37,5 +37,7 @@ export default {
 <style scoped>
 div{
   height: 500px;
+  background-color: aliceblue;
 }
+
 </style>

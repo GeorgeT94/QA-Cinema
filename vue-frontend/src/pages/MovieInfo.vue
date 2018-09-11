@@ -33,8 +33,11 @@ export default {
 
 <style scoped>
 
+<<<<<<< HEAD
 .movie-image{
     width:500px;
 }
+=======
+>>>>>>> develop
 
 </style>

@@ -3,56 +3,48 @@
     <table class="table table-borderless">
         <thead>
           <tr>
-            <th class="footer-heading">Quick Links</th>
-            <th class="footer-heading">Follow us</th>
+            <th>Quick Links</th>
+            <th>Social</th>
           </tr>
         </thead>
         <tbody>
           <td>
-            <router-link to="/"><a href="#" class="push-right-footer">Home</a></router-link>
-            <router-link to="/"><a href="#" class="push-right-footer">About us</a></router-link>
-            <router-link to="/"><a href="#">Contact us</a></router-link>
+            <a href="#">link1</a><br>
+            <a href="#">link2</a><br>
+            <a href="#">link3</a>
           </td>
           <td>
-            <a href="#" class="push-right-footer"><img src="../../assets/facebook.png" /></a>
-            <a href="#" class="push-right-footer"><img src="../../assets/twitter.png" /></a>
-            <a href="#" class="push-right-footer"><img src="../../assets/youtube-2.png" /></a>
-            <a href="#"><img src="../../assets/instagram.png" /></a>
+            <a href="#">social1</a><br>
+            <a href="#">social2</a><br>
+            <a href="#">social3</a>
           </td>
         </tbody>
       </table>
-
-    <span>&copy;
-      {{ new Date().getFullYear() }}
-      QA Cinemas. All rights reserved.</span>
+    <a>© QA Cinemas. All rights reserved.</a>
   </footer>
 </template>
 
 <script>
 export default {
   name: 'Footer',
+
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.app-footer {
+.app-footer{
+  font-size: 12px;
+  padding-right: 10%;
   background-color: lightgrey;
-  font-size: 0.8em;
+  margin-bottom: 0px;
   text-align: center;
-  padding-bottom: 20px;
 }
-.footer-heading {
-  font-size: 1.5em !important;
+th{
+  padding-top: 20px;
+  font-size: 15px;
 }
-a {
-  color : #2a1b3d;
-}
-.push-right-footer {
-  padding-right: 10px;
-}
-img:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+a{
+  line-height: 30px;
 }
 </style>

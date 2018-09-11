@@ -3,11 +3,13 @@ package com.qa.cinema.business.dto;
 public class ShowingDto {
     
 	private Integer showingId;
-    private String ShowingName;
+    private String showingTime;
+    private Integer showingTMDB;
 
-    public ShowingDto(Integer showingId, String showingName) {
+    public ShowingDto(Integer showingId, String showingTime, Integer showingTMDB) {
         this.showingId = showingId;
-        ShowingName = showingName;
+        this.showingTime = showingTime;
+        this.showingTMDB = showingTMDB;
     }
 
     public ShowingDto() {
@@ -21,11 +23,19 @@ public class ShowingDto {
         this.showingId = showingId;
     }
 
-    public String getShowingName() {
-        return ShowingName;
+    public void setShowingTime(String showingTime) {
+        this.showingTime = showingTime;
     }
 
-    public void setShowingName(String showingName) {
-        ShowingName = showingName;
+    public String getShowingTime() {
+        return showingTime;
+    }
+
+    public Integer getShowingTMDB() {
+        return showingTMDB;
+    }
+
+    public void setShowingTMDB(Integer showingTMDB) {
+        this.showingTMDB = showingTMDB;
     }
 }

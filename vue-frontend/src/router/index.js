@@ -8,6 +8,11 @@ import MoviePage from '../pages/MoviesPage.vue'
 import AboutUs from '../pages/AboutUs.vue'
 import FutureReleases from '../pages/FutureReleases'
 import MovieInfo from '../pages/MovieInfo'
+import AdminLogin from '../pages/AdminLogin'
+import AdminPage from '../pages/AdminPage'
+import NowShowing from '../pages/NowShowing'
+import GettingHere from '../pages/GettingHere'
+import Guestbook from '../pages/Guestbook'
 
 Vue.use(Router)
 export default new Router({
@@ -44,15 +49,41 @@ export default new Router({
             component: AboutUs
         },
         {
+            path: '/movieinfo/:id',
+            name: 'MovieInfo',
+            component: MovieInfo
+        },
+        {
+            path: '/adminLogin',
+            name: 'AdminLogin',
+            component: AdminLogin
+        },
+        {
+            path: '/adminPage',
+            name: 'AdminPage',
+            component: AdminPage
+        },
+        {
+            path: '/current',
+            name: 'NowShowing',
+            component: NowShowing
+        },
+        {
             path: '/upcoming',
             name: 'FutureReleases',
             component: FutureReleases
         },
         {
-            path: '/movieinfo/:id',
-            name: 'MovieInfo',
-            component: MovieInfo
+            path: '/gettingHere',
+            name: 'GettingHere',
+            component: GettingHere
+        },
+        {
+            path: '/guestbook',
+            name: 'Guestbook',
+            component: Guestbook
         }
+
 
     ]
 })
