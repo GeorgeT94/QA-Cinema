@@ -30,4 +30,9 @@ public class FilmServiceimpl implements FilmService {
 	public List<FilmDto> getAllFilms() {
 		return filmRepository.findAll().stream().map(FilmConverter::entityToDto).collect(Collectors.toList());
 	}
+
+	@Override
+	public void deleteFilm(Integer id){
+		filmRepository.delete(id);
+	}
 }

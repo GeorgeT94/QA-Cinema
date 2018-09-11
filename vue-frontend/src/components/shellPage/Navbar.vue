@@ -10,16 +10,24 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <router-link to="/"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a></router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/moviesPage"><a class="nav-link" href="#">Movie Listing</a></router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/upcoming"><a class="nav-link" href="#">Upcoming Films</a></router-link>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFilm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Films
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownFilm">
+              <router-link to="/moviesPage"><a class="dropdown-item" href="#">Movie Listing</a></router-link>
+              <div class="dropdown-divider"></div>
+              <router-link to="/upcoming"><a class="dropdown-item" href="#">Upcoming Films</a></router-link>
+              <div class="dropdown-divider"></div>
+              <router-link to="/current"><a class="dropdown-item" href="#">Now Showing</a></router-link>
+            </div>
           </li>
           <li class="nav-item">
             <router-link to="/ticketPage"><a class="nav-link" href="#">Book Tickets</a></router-link>
           </li>
+
+
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               About Us
@@ -28,7 +36,15 @@
               <router-link to="/classifications"><a class="dropdown-item" href="#">Movie Classifications</a></router-link>
               <div class="dropdown-divider"></div>
               <router-link to="/openingTimes"><a class="dropdown-item" href="#">Opening Times</a></router-link>
+              <div class="dropdown-divider"></div>
+              <router-link to="/gettingHere"><a class="dropdown-item" href="#">Getting Here</a></router-link>
+              <div class="dropdown-divider"></div>
+              <router-link to="/guestbook"><a class="dropdown-item" href="#">Guestbook</a></router-link>
+
             </div>
+          </li>
+          <li class="nav-item">
+            <router-link to="/adminLogin"><a class="nav-link" href="#">Login</a></router-link>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
