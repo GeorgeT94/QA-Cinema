@@ -77,8 +77,7 @@ export default new Router({
             path: '/gettingHere',
             name: 'GettingHere',
             component: GettingHere
-        }
-        ,
+        },
         {
             path: '/guestbook',
             name: 'Guestbook',
