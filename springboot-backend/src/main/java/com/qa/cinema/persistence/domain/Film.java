@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Entity
+@Table
 public class Film{
 	
 	@Column
@@ -12,9 +13,12 @@ public class Film{
 	@Id
 	private Integer filmId;
     @Column
+    private Integer filmTMDB;
+    @Column
     private String filmName;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Showing> Showings= new LinkedList<>();
+    @Column
+    private String filmPosterURL;
+
 
     public Integer getFilmId() {
         return filmId;
@@ -32,19 +36,36 @@ public class Film{
         this.filmName = filmName;
     }
 
-    public List<Showing> getShowings() {
-        return Showings;
+
+
+    public Integer getFilmTMDB() {
+        return filmTMDB;
     }
 
-    public void setShowings(List<Showing> Showings) {
-        this.Showings = Showings;
+
+    public String getFilmPosterURL() {
+        return filmPosterURL;
     }
+
+
+
+    public void setFilmPosterURL(String filmPosterURL) {
+        this.filmPosterURL = filmPosterURL;
+    }
+
+
+
+    public void setFilmTMDB(Integer filmTMDB) {
+        this.filmTMDB = filmTMDB;
+    }
+
 
     public Film() {
     }
 
-    public Film(String filmName, List<Showing> Showings) {
+    public Film(Integer filmTMDB,String filmName, String filmPosterURL) {
         this.filmName = filmName;
-        this.Showings = Showings;
+        this.filmTMDB = filmTMDB;
+        this.filmPosterURL = filmPosterURL;
     }
 }

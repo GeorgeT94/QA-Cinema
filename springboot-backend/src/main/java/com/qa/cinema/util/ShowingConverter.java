@@ -6,12 +6,12 @@ import com.qa.cinema.persistence.domain.Showing;
 public class ShowingConverter {
 	
 	public static Showing dtoToEntity(ShowingDto ShowingDto) {
-		Showing Showing = new Showing(ShowingDto.getShowingName(), null);
+		Showing Showing = new Showing(ShowingDto.getShowingTime(), ShowingDto.getShowingTMDB());
 		Showing.setShowingId(ShowingDto.getShowingId());
 		return Showing;
 	}
 
 	public static ShowingDto entityToDto(Showing showing) {
-		return new ShowingDto(showing.getShowingId(), showing.getShowingName());
+		return new ShowingDto(showing.getShowingId(), showing.getShowingTime(), showing.getShowingTMDB());
 	}
 }

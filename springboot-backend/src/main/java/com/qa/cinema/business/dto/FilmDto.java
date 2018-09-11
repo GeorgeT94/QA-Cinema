@@ -7,16 +7,24 @@ public class FilmDto {
 	
     private Integer filmId;
     private String filmName;
-    private List<ShowingDto> showings= new ArrayList<>();
+    private Integer filmTMDB;
+    private String filmPosterURL;
 
-    public FilmDto(Integer filmId, String filmName, List<ShowingDto> showings) {
-        this.filmId = filmId;
-        this.filmName = filmName;
-        this.showings = showings;
-    }
+
 
     public FilmDto() {
     }
+
+    public FilmDto(Integer filmId, Integer filmTMDB,String filmName, String filmPosterURL) {
+        this.filmId = filmId;
+        this.filmName = filmName;
+        this.filmTMDB = filmTMDB;
+        this.filmPosterURL = filmPosterURL;
+
+
+    }
+
+
 
     public Integer getFilmId() {
         return filmId;
@@ -34,11 +42,21 @@ public class FilmDto {
         this.filmName = filmName;
     }
 
-    public List<ShowingDto> getShowings() {
-        return showings;
+    public void setFilmTMDB(Integer filmTMDB) {
+        this.filmTMDB = filmTMDB;
     }
 
-    public void setShowings(List<ShowingDto> showings) {
-        this.showings = showings;
+    public String getFilmPosterURL() {
+        return filmPosterURL;
     }
+
+
+    public void setFilmPosterURL(String filmPosterURL) {
+        this.filmPosterURL = filmPosterURL;
+    }
+
+    public Integer getFilmTMDB() {
+        return filmTMDB;
+    }
+
 }
