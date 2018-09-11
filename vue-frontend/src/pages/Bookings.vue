@@ -4,3 +4,9 @@
     <Listing/>
   </div>
 </template>
+
+<style>
+  #bookings{
+    background-color: aliceblue;
+  }
+</style>

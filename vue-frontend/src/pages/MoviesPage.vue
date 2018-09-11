@@ -1,13 +1,12 @@
 <template>
   <div>
-    <h1>Movie Gallery</h1>
     <PopularMovies />
   </div>
 
 </template>
 
 <script>
-import PopularMovies from "../components/listings/PopularMovies.vue"
+import PopularMovies from "../components/listings/PopularMovies"
 
 
 export default {

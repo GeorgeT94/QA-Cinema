@@ -1,9 +1,9 @@
 <template>
   <div id="listing">
-    <h3>Latest Releases</h3>
+    <h4>Latest Releases</h4>
     <div class="container">
       <div v-for="movie in upcoming.data.results" class="movie-info"  v-bind:key="movie.title">
-        <h3>{{movie.name}}</h3>
+        <h3>{{movie.title}}</h3>
         <router-link v-bind:to="'/movieinfo/' + movie.id">
           <img class="movie-image" v-bind:src="'https://image.tmdb.org/t/p/original' + movie.poster_path"><br>
         </router-link>
@@ -50,7 +50,7 @@ export default {
   mounted () {
     const axios = require('axios');
     axios
-      .get(' https://api.themoviedb.org/3/movie/upcoming?api_key=cbac8005b1d7ddb6c8dcf5b8f4179220&language=en-US&page=1')
+      .get('http://127.0.0.1:8080/tmdb/upcoming')
       .then(response => (this.upcoming = response))
 
   },
@@ -110,5 +110,10 @@ img{
 }
 table{
   width: 50%;
+}
+
+img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 </style>

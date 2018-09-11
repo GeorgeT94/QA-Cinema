@@ -35,4 +35,9 @@ public class ShowingServiceimpl implements ShowingService{
     public List<ShowingDto> getShowingByTMDB(Integer tmdb) {
         return showingRepository.findAllByShowingTMDBEquals(tmdb).stream().map(ShowingConverter::entityToDto).collect(Collectors.toList());
     }
+
+    @Override
+    public void deleteShowing(Integer id){
+        showingRepository.delete(id);
+    }
 }
