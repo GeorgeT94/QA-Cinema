@@ -3,20 +3,21 @@
     <table class="table table-borderless">
         <thead>
           <tr>
-            <th>Quick Links</th>
-            <th>Social</th>
+            <th class="footer-heading">Quick Links</th>
+            <th class="footer-heading">Follow us</th>
           </tr>
         </thead>
         <tbody>
           <td>
-            <a href="#">link1</a><br>
-            <a href="#">link2</a><br>
-            <a href="#">link3</a>
+            <router-link to="/"><a href="#" class="push-right-footer">Home</a></router-link>
+            <router-link to="/"><a href="#" class="push-right-footer">About us</a></router-link>
+            <router-link to="/"><a href="#">Contact us</a></router-link>
           </td>
           <td>
-            <a href="#">social1</a><br>
-            <a href="#">social2</a><br>
-            <a href="#">social3</a>
+           <a href="#" class="push-right-footer"><img src="../../assets/facebook.png" /></a>
+            <a href="#" class="push-right-footer"><img src="../../assets/twitter.png" /></a>
+            <a href="#" class="push-right-footer"><img src="../../assets/youtube-2.png" /></a>
+            <a href="#"><img src="../../assets/instagram.png" /></a>
           </td>
         </tbody>
       </table>
@@ -39,10 +40,24 @@ export default {
   background-color: lightgrey;
   margin-bottom: 0px;
   text-align: center;
+  padding-bottom: 20px;
+}
+.footer-heading {
+  font-size: 1.5em !important;
+}
+a {
+  color : #2a1b3d;
+}
+.push-right-footer {
+  padding-right: 10px;
 }
 th{
   padding-top: 20px;
   font-size: 15px;
+}
+img:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
 }
 a{
   line-height: 30px;
